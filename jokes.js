@@ -7,7 +7,7 @@ async function whole(){
      try{ 
        
         
-        const jokes= await fetch('https://api.chucknorris.io/jokes/random');
+        const jokes= await fetch(VITE_APIKEY);
         const json= await jokes.json()
         localStorage.setItem("key",JSON.stringify(json.value))
        main.innerHTML=json.value;
