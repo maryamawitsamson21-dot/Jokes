@@ -1,17 +1,64 @@
 <!DOCTYPE html>
-<html>
-    <head>
-         <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script><title>Funny Jokes</title></head>
-    <body class="text-gray-500 bg-black w-full  min-h-screen text-center ">
-        <div class="flex flex-col items-center justify-center space-y-6 mt-8">
-        <div class="" >
-            <h1>Chuck Norris API</h1>
-           
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Funny Jokes</title>
+</head>
+<!-- Fixed: Added margin/padding resets and setup the Flex column sticky footer structure -->
+<body class="m-0 p-0 text-gray-300 bg-black w-full min-h-screen flex flex-col items-center">
+
+    <!-- Main Content Container: Stretches out to swallow empty space and centers elements -->
+    <main class="flex-grow flex flex-col items-center justify-center space-y-6 mt-8 px-4 w-full">
+        
+        <div>
+            <!-- Fixed: Made the title large, bold, and highlighted with bright white -->
+            <h1 class="text-4xl font-extrabold text-white tracking-wide uppercase">
+                Chuck Norris API
+            </h1>
         </div>
-         <div><p id="main" ></p></div>
-         <div class="w-24"><img src="https://as1.ftcdn.net/v2/jpg/01/33/21/60/1000_F_133216088_Za1Z6sMjrAgGqKnHIj3EaghzA0hUHTYg.jpg" alt="joke image"></div>
-<div class="border border-2 rounded-full w-24 my-8 "><button class="cursor-pointer" id="btn">Load Another</button></div>
-</div>
-<script src="jokes.js"></script>
-    </body>
+
+        <!-- Target Container for the dynamic API joke text -->
+        <div class="max-w-xl text-center">
+            <p id="main" class="text-lg font-semibold text-gray-200 italic leading-relaxed"></p>
+        </div>
+
+        <!-- Card Wrapper: Styled the image container so it looks sharp and fits proportionally -->
+        <div class="w-64 overflow-hidden rounded-2xl border border-neutral-800 bg-neutral-900/40 p-2 shadow-lg">
+            <img 
+                class="w-full h-auto rounded-xl object-cover" 
+                src="https://as1.ftcdn.net/v2/jpg/01/33/21/60/1000_F_133216088_Za1Z6sMjrAgGqKnHIj3EaghzA0hUHTYg.jpg" 
+                alt="funny joke asset image"
+            >
+        </div>
+
+        <!-- Button Design: Extended the hover state and padding across a rounded boundary ring -->
+        <div class="my-4">
+            <button 
+                id="btn" 
+                class="cursor-pointer bg-neutral-900 border border-neutral-700 hover:border-white text-white font-bold text-sm tracking-wide uppercase px-6 py-2.5 rounded-full transition-all duration-200 shadow-md active:scale-95"
+            >
+                Load Another
+            </button>
+        </div>
+
+    </main>
+
+    <!-- Pinned Black Footer: Clean, modern row layout locked perfectly to the floor -->
+    <footer class="w-full bg-black border-t border-neutral-900 py-6">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="text-center sm:text-left">
+                <p class="text-white font-bold text-base tracking-wide">Chuck Norris API</p>
+                <p class="text-xs text-gray-500 mt-0.5">Learning by building applications.</p>
+            </div>
+            <div class="text-xs text-gray-600 text-center sm:text-right">
+                © 2026 Maryamawit Samson. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script src="jokes.js"></script>
+</body>
 </html>
+
